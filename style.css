@@ -7,15 +7,18 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #2e2e2e;
-    color: #f0f0f0;
+    background-color: #181818; /* Dark background */
+    color: #e0e0e0;
+    line-height: 1.6;
 }
 
+/* Main title */
 h2 {
     font-size: 2.5rem;
-    color: #f0f0f0;
+    color: #9b59b6; /* Purple accent for the title */
     text-align: center;
-    margin: 20px 0;
+    margin: 30px 0;
+    letter-spacing: 1px;
 }
 
 /* Main container */
@@ -23,168 +26,200 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 30px;
 }
 
 /* Navigation bar */
 .nav {
-    background-color: #1c1c1c;
+    background-color: #2c3e50; /* Dark blue-gray */
     width: 100%;
     padding: 20px 0;
     color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
 }
 
 .nav h2 {
     margin: 0;
+    font-size: 2rem;
 }
 
 /* Button Styling */
 button {
-    padding: 10px 20px;
-    font-size: 1rem;
+    padding: 12px 20px;
+    font-size: 1.1rem;
     cursor: pointer;
     border: none;
-    background-color: #4e73df;
+    background-color: #1abc9c; /* Mint green for buttons */
     color: white;
-    border-radius: 5px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
 }
 
 button:hover {
-    background-color: #375a9e;
+    background-color: #16a085; /* Darker mint green */
+    transform: translateY(-2px);
 }
 
 button:disabled {
-    background-color: #6c757d;
+    background-color: #888;
     cursor: not-allowed;
 }
 
-/* List container */
-#cantainer {
-    margin: 20px 0;
-}
-
+/* Add new list button */
 #btn {
     display: inline-block;
-    background-color: #28a745;
-    padding: 10px 20px;
+    background-color: #9b59b6; /* Purple for the main button */
+    padding: 12px 20px;
     color: white;
-    font-size: 1rem;
-    border-radius: 5px;
+    font-size: 1.1rem;
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 #btn:hover {
-    background-color: #218838;
+    background-color: #8e44ad; /* Darker purple */
 }
 
-/* List styles */
+/* List container */
 #list {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 20px;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .card-container {
-    background-color: #333;
+    background-color: #34495e; /* Blue-gray card background */
     width: 300px;
-    min-height: 200px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 15px;
+    min-height: 250px;
+    border-radius: 12px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
 }
 
 .card-container h4 {
     font-size: 1.25rem;
-    color: #f0f0f0;
+    color: #fff;
+    margin-bottom: 15px;
 }
 
 .card-container button {
     font-size: 1rem;
-    margin-top: 10px;
-    align-self: flex-start;
+    padding: 8px 15px;
+    background-color: #1abc9c;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card-container button:hover {
+    background-color: #16a085;
 }
 
 .card-container .cross {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    color: #dc3545;
-    cursor: pointer;
+    top: 15px;
+    right: 15px;
+    color: #e74c3c; /* Red for the close button */
     font-size: 1.5rem;
-    transition: color 0.3s ease;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .card-container .cross:hover {
-    color: #c82333;
+    color: #c0392b; /* Darker red */
 }
 
 /* Enhanced input field styling */
 input[type="text"] {
     width: 100%;
-    padding: 12px 15px;
+    padding: 12px;
     margin-top: 10px;
-    background-color: #444;
+    background-color: #2c3e50; /* Darker background */
     color: #f0f0f0;
-    border: 1px solid #555;
-    border-radius: 5px;
+    border: 1px solid #34495e; /* Slightly lighter gray border */
+    border-radius: 8px;
     font-size: 1rem;
     transition: all 0.3s ease;
 }
 
 input[type="text"]:focus {
     outline: none;
-    border-color: #4e73df;
-    background-color: #555;
+    border-color: #1abc9c; /* Green border on focus */
+    background-color: #34495e; /* Slightly lighter background */
 }
 
 /* Nested card styling */
 textarea {
     width: 100%;
-    padding: 8px;
-    border-radius: 5px;
-    border: 1px solid #444;
-    background-color: #555;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #34495e;
+    background-color: #2c3e50;
     color: #f0f0f0;
     resize: vertical;
+    font-size: 1rem;
+    transition: all 0.3s ease;
 }
 
 textarea:focus {
     outline: none;
-    border-color: #4e73df;
+    border-color: #1abc9c; /* Green border on focus */
+    background-color: #34495e;
 }
 
 ul {
     list-style-type: none;
     padding: 0;
+    margin-top: 15px;
 }
 
 ul li {
-    background-color: #444;
-    padding: 10px;
+    background-color: #34495e;
+    padding: 12px;
     margin: 5px 0;
-    border-radius: 5px;
+    border-radius: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+ul li:hover {
+    background-color: #2c3e50;
 }
 
 ul li i {
-    color: #dc3545;
+    color: #e74c3c; /* Red for delete icon */
     cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+ul li i:hover {
+    color: #c0392b; /* Darker red */
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .main {
-        padding: 10px;
+        padding: 20px;
     }
 
     .card-container {
@@ -208,15 +243,16 @@ ul li i {
 
 @media (max-width: 480px) {
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
 
     .card-container {
-        width: 90%;
+        width: 100%;
+        padding: 15px;
     }
 
     button {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     .cross {

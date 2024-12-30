@@ -10,7 +10,7 @@ function creatediv() {
   list.appendChild(listcantiner);
 
   let btn2 = listcantiner.querySelector("#btn2");
-  let cross = listcantiner.querySelector(".cross");
+  let cross = listcantiner.querySelector(".cross"); 
 
   
   cross.addEventListener("click", function () {
@@ -27,6 +27,7 @@ function creatediv() {
       let h4 = document.createElement("h4");
       h4.textContent = inp;
       cardcantainer.appendChild(h4);
+      listcantiner.querySelector("#inp").value = "";
 
       let btn3 = document.createElement("button");
       btn3.textContent = "Add a card";
@@ -45,8 +46,10 @@ function creatediv() {
          btn4.addEventListener("click" ,function(){
           let ul = document.createElement("li");
           ul.textContent =  textarea.value;
-          nestedListcantiner.appendChild(ul)
-         })
+          nestedListcantiner.appendChild(ul);
+          textarea.value = "";
+        })
+      
         let nestedCross = nestedListcantiner.querySelector(".cross");
         nestedCross.addEventListener("click", function () {
           nestedListcantiner.remove();
@@ -62,5 +65,6 @@ function creatediv() {
       });
     }
   });
+  
 }
 
